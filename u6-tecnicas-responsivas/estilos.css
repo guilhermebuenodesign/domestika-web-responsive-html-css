@@ -1,0 +1,87 @@
+/* Definições Gerais ------------------------------------------------------ */
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-size: 16px;
+    max-width: 1000px;
+    margin-top: 60px;
+    margin-left: 20px;
+    margin-right: 20px;
+    line-height: 1.3;
+    background-color: #FFFAF1;
+}
+
+p {
+    text-align: justify;
+    hyphens: auto;
+}
+
+div {
+    padding: 15px;
+}
+
+p {
+    max-width: 40em;
+}
+
+.responsivo {
+    float: none;
+    width: 100%;
+} 
+
+.navegacao ul {
+    padding: 0px;
+    margin: 0px;
+}
+
+.navegacao li {
+    display: block;
+    margin-right: 1em;
+    line-height: 1.5;
+    list-style: none;
+    text-decoration: underline;
+}
+
+.lancador-menu {
+    position: absolute;
+    top: 20px;
+    text-decoration: underline;
+}
+
+@media screen and (min-width: 400px) {
+    .lancador-menu {
+        display: none;
+    }
+
+    .navegacao {
+        position: absolute;
+        top: 20px;
+    }
+
+    .navegacao li {
+        float: left;
+    }
+}
+
+@media screen and (min-width: 600px) {
+    .responsivo {
+        float: left;
+        width: 50%;
+    }
+}
+
+@media screen and (min-width: 850px) {
+    .responsivo {
+        width: 25%;
+    }    
+}
+
+@media screen and (min-width: 1040px) {
+    body {
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
