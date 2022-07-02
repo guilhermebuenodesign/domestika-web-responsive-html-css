@@ -5,13 +5,16 @@
   --off-white: #f1f1f1;
 }
 
+.container {
+  padding: 0 2rem;
+}
+
 body {
   position: relative;
-  max-width: 485px;
+  max-width: 66ch;
   margin: 0 auto 4rem auto;
-  padding: 0 2rem;
-  line-height: 1.4;
-  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  line-height: 1.5;
+  font-family: "Work Sans", sans-serif;
   color: var(--off-black);
   background: var(--off-white);
 }
@@ -23,12 +26,21 @@ header {
 
 a {
   transition: 0.5s;
-  color: var(--off-black);
+  color: inherit;
   text-decoration: none;
 }
 
 a:hover {
   opacity: 0.5;
+}
+
+h1 {
+  font-size: clamp(2rem, 1rem + 10vw, 5rem);
+  line-height: 1;
+}
+
+p {
+  max-width: 50ch;
 }
 
 /* Definições Específicas ----------------------------------------- */
@@ -60,14 +72,26 @@ a:hover {
   border-bottom: 1px solid var(--off-black);
 }
 
+::-moz-selection,
+::selection {
+  background: #f8de7e;
+}
+
 @media screen and (max-width: 485px) {
+  .js a {
+    transition: color 0s;
+  }
+  .js a:hover {
+    opacity: 1;
+  }
+
   .js .navegacao {
     max-height: 0;
     overflow: hidden;
     position: absolute;
     top: 2rem;
-    left: 2rem;
-    right: 2rem;
+    left: 0;
+    right: 0;
     background-color: var(--off-black);
     transition: max-height 0.5s;
   }
@@ -78,16 +102,20 @@ a:hover {
 
   .js .navegacao li {
     padding: 0.25em 0.5em;
+    color: var(--off-white);
     border: 2px solid var(--off-black);
     border-top: 2px solid var(--off-white);
   }
 
-  .js .navegacao a {
-    color: var(--off-white);
+  .js .navegacao li:hover {
+    color: var(--off-black);
+    background-color: var(--off-white);
+    border-top: 2px solid var(--off-black);
+    font-weight: bold;
   }
 
   .js #menu.menu-desdobrado {
-    max-height: 172px;
+    max-height: 12rem;
   }
 }
 
